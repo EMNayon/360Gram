@@ -1,0 +1,27 @@
+.gram-container {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    height: 70vh; /* Adjust the height as needed */
+  }
+.gram{
+    
+    font-size: 20vw;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+.gram-text{
+    color: rgb(238, 13, 119);
+}
+
+@media (max-width: 768px) {
+  .gram {
+    font-size: 10vw; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+
+
+

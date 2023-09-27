@@ -1,0 +1,13 @@
+.mbMenu{
+  overflow: scroll !important;
+  max-height: 80vh;
+}
+.title-color{
+    color: rgb(76, 193, 138);
+  }
+  .title-color:active{
+    color: rgb(76, 193, 138);
+  }
+  .text-color:hover{
+    background-color: rgb(76, 193, 138);
+  }

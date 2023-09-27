@@ -1,5 +1,6 @@
 {
   "name": "360gram",
+  "homepage": "http://360gram.digital/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

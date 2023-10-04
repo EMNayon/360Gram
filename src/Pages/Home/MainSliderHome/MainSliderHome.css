@@ -1,20 +1,61 @@
 @keyframes slide {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(20px);
-    }
-  }
-  
-  .absolute1 {
-    animation: slide 2s ease-in-out infinite;
-  
-  }
-  .button{
-    border: 1px solid white;
-  }
-.button:hover{
-  background-color: rgb(rgb(239, 16, 119));
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(20px);
+	}
 }
 
+.absolute1 {
+	animation: slide 2s ease-in-out infinite;
+}
+.button {
+	border: 1px solid white;
+}
+.button:hover {
+	background-color: rgb(rgb(239, 16, 119));
+}
+/* animation  for text*/
+.parent-container {
+	overflow: hidden;
+	position: relative;
+}
+
+.parent-container-text {
+	position: absolute;
+	top: 20;
+	left: -100%;
+	white-space: nowrap;
+	animation: text 1s ease-in-out forwards;
+}
+
+@keyframes text {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 100px;
+	}
+}
+
+/* animation for image  */
+
+.parent-container-image {
+	z-index: -5;
+	max-width: 680px;
+	position: absolute;
+	top: 0;
+	right: -100%;
+	animation: imageanimation 2s ease-in-out forwards;
+}
+
+@keyframes imageanimation {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 0;
+	}
+}

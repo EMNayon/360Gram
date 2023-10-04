@@ -34,9 +34,7 @@ const Home = () => {
            <PortfolioOne/>
            <AgencyBenifits/>
            <BlogOneHome isShow={true}/>
-           <ContactOneHome/>
-           
-          
+           <ContactOneHome/> 
         </div>
     );
 };

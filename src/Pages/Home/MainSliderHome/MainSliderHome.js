@@ -4,16 +4,22 @@ import 'aos/dist/aos.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './MainSliderHome.css';
+
+// human img 
+
 import sliderImage1 from '../../../assets/images/backgrounds/slider-3-shape-1.jpg';
 import sliderImage2 from '../../../assets/images/backgrounds/slider-3-shape-2.jpg';
 import sliderImage3 from '../../../assets/images/backgrounds/slider-3-shape-3.jpg';
 
+// shape 
+
 import sliderShape1 from '../../../assets/images/shapes/slider-3-shape-1.png';
 import sliderShape2 from '../../../assets/images/shapes/slider-3-shape-2.png';
 import sliderShape3 from '../../../assets/images/shapes/slider-3-shape-3.png';
+import sliderBackground from '../../../assets/images/shapes/slider-3-bg-1.png';
 import { Link } from 'react-router-dom';
 // import { hover } from "@testing-library/user-event/dist/hover";
- 
+
 const MainSliderHome = () => {
 	const Image1 = {
 		backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${sliderImage1})`,
@@ -21,6 +27,8 @@ const MainSliderHome = () => {
 		backgroundRepeat: 'no-repeat', // Image repeat korte chaile
 		width: '100%', // Width set korte chaile
 		height: '540px', // Height set korte chaile
+		clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)',
+		zIndex: -1,
 	};
 
 	const Image2 = {
@@ -29,6 +37,8 @@ const MainSliderHome = () => {
 		backgroundRepeat: 'no-repeat', // Image repeat korte chaile
 		width: '100%', // Width set korte chaile
 		height: '540px', // Height set korte chaile
+		clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)',
+		zIndex: -1,
 	};
 
 	const Image3 = {
@@ -37,18 +47,23 @@ const MainSliderHome = () => {
 		backgroundRepeat: 'no-repeat', // Image repeat korte chaile
 		width: '100%', // Width set korte chaile
 		height: '540px', // Height set korte chaile
+		clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)',
+		zIndex: -1,
 	};
+
+	// slider backgroundImage end
+
 	const divStyle1 = {
 		backgroundImage: `url(${sliderShape1})`,
-		backgroundSize: 'cover', // Image size set korte chaile
+		// backgroundSize: 'contain', // Image size set korte chaile
 		backgroundRepeat: 'no-repeat', // Image repeat korte chaile
-		width: '10%', // Width set korte chaile
-		height: '100%', // Height set korte chaile
+		width: '100%', // Width set korte chaile
+		height: '320px', // Height set korte chaile
 	};
 
 	const divStyle2 = {
 		backgroundImage: `url(${sliderShape2})`,
-		backgroundSize: 'cover', // Image size set korte chaile
+		backgroundSize: 'contain', // Image size set korte chaile
 		backgroundRepeat: 'no-repeat', // Image repeat korte chaile
 		width: '100%', // Width set korte chaile
 		height: '100%', // Height set korte chaile
@@ -56,7 +71,7 @@ const MainSliderHome = () => {
 
 	const divStyle3 = {
 		backgroundImage: `url(${sliderShape3})`,
-		backgroundSize: 'cover', // Image size set korte chaile
+		// backgroundSize: 'cover', // Image size set korte chaile
 		backgroundRepeat: 'no-repeat', // Image repeat korte chaile
 		width: '100%', // Width set korte chaile
 		height: '100%', // Height set korte chaile
@@ -80,7 +95,7 @@ const MainSliderHome = () => {
 	};
 
 	return (
-		<div>
+		<div className='slider-container'>
 			<Carousel
 				swipeable={false}
 				draggable={false}
@@ -100,94 +115,100 @@ const MainSliderHome = () => {
 				itemClass='carousel-item-padding-40-px'
 				className='-z-0 parent-container'
 			>
+				{/* 1st  */}
 				<div className='grid grid-cols-12 '>
-					<div className='col-span-6 bg-black text-white '>
-						<div className='absolute transform -translate-y-1/2 left-24 top-1/2 parent-container-text'>
+					<div className='col-span-6  text-white '>
+						<div className='absolute transform -translate-y-1/2 left-4 top-1/2 parent-container-text'>
 							<h2 className=' text-2xl text-white'>
-								WELCOME TO CREATIVE AGENCY0
+								WELCOME TO CREATIVE AGENCY First
 							</h2>
 							<br />
 							<h2 className='text-6xl text-white py-12 '>
-								WE'ARE <br /> DEGITAL <br /> MARKETING <br /> AGENCY0
+								WE'ARE <br /> DEGITAL <br /> MARKETING <br /> AGENCY First
 							</h2>
-							<Link to='/about-us'>DISCOVER MORE</Link>
+							<Link class='nisoz-btn__text text-white' to='/about-us'>
+								DISCOVER MORE
+							</Link>
 						</div>
 					</div>
 					<div
-						className='absolute transform -translate-y-1/2 left-[650px] top-0'
+						className='absolute transform -translate-y-1/2 left-[840px] top-0'
 						style={divStyle1}
 					></div>
 					<div
-						className='absolute bottom-0 left-[-520px] z-20 absolute1'
+						className='absolute bottom-0 left-[580px] z-20 absolute1'
 						style={divStyle2}
 					></div>
 					<div
-						className='absolute bottom-0 left-[-540px]  absolute1'
+						className='absolute bottom-0 left-[480px]  absolute1'
 						style={divStyle3}
 					></div>
 
-					<div
-						className='col-span-6 bg-black text-white parent-container-image'
-						style={Image1}
-					></div>
+					<div className='col-span-6  text-white' style={Image1}></div>
 				</div>
-
-				<div className='grid grid-cols-12'>
-					<div className='col-span-6 bg-black text-white'>
-						<div className='absolute transform -translate-y-1/2 left-24 top-1/2  '>
+				{/* 2nd  */}
+				<div className='grid grid-cols-12 '>
+					<div className='col-span-6  text-white '>
+						<div className='absolute transform -translate-y-1/2 left-4 top-1/2 parent-container-text'>
 							<h2 className=' text-2xl text-white'>
-								WELCOME TO CREATIVE AGENCY1
+								WELCOME TO CREATIVE AGENCY Second
 							</h2>
 							<br />
-							<h2 className='text-6xl text-white py-12'>
-								WE'ARE <br /> DEGITAL <br /> MARKETING <br /> AGENCY1
+							<h2 className='text-6xl text-white py-12 '>
+								WE'ARE <br /> DEGITAL <br /> MARKETING <br /> AGENCY Second
 							</h2>
-							<Link to='/about-us'>DISCOVER MORE</Link>
+							<Link class='nisoz-btn__text text-white' to='/about-us'>
+								DISCOVER MORE
+							</Link>
 						</div>
 					</div>
 					<div
-						className='absolute transform -translate-y-1/2 left-[650px] top-0'
+						className='absolute transform -translate-y-1/2 left-[840px] top-0'
 						style={divStyle1}
 					></div>
 					<div
-						className='absolute bottom-0 left-[-520px] z-20 absolute1'
+						className='absolute bottom-0 left-[580px] z-20 absolute1'
 						style={divStyle2}
 					></div>
 					<div
-						className='absolute bottom-0 left-[-540px]  absolute1'
+						className='absolute bottom-0 left-[480px]  absolute1'
 						style={divStyle3}
 					></div>
 
-					<div className='col-span-6 bg-black text-white' style={Image2}></div>
+					<div className='col-span-6  text-white' style={Image2}></div>
 				</div>
 
-				<div className='grid grid-cols-12  '>
-					<div className='col-span-6 bg-black text-white'>
-						<div className='absolute transform -translate-y-1/2 left-24 top-1/2 '>
+				{/* 3rd  */}
+				<div className='grid grid-cols-12 '>
+					<div className='col-span-6  text-white '>
+						<div className='absolute transform -translate-y-1/2 left-4 top-1/2 parent-container-text'>
 							<h2 className=' text-2xl text-white'>
-								WELCOME TO CREATIVE AGENCY2
+								WELCOME TO CREATIVE AGENCY Third
 							</h2>
 							<br />
-							<h2 className='text-6xl text-white py-12'>
-								WE'ARE <br /> DEGITAL <br /> MARKETING <br /> AGENCY2
+							<h2 className='text-6xl text-white py-12 '>
+								WE'ARE <br /> DEGITAL <br /> MARKETING <br /> AGENCY Third
 							</h2>
-							<Link to='/about-us'>DISCOVER MORE</Link>
+
+							<Link class='nisoz-btn__text text-white' to='/about-us'>
+								DISCOVER MORE
+							</Link>
 						</div>
 					</div>
 					<div
-						className='absolute transform -translate-y-1/2 left-[650px] top-0'
+						className='absolute transform -translate-y-1/2 left-[840px] top-0'
 						style={divStyle1}
 					></div>
 					<div
-						className='absolute bottom-0 left-[-520px] z-20 absolute1'
+						className='absolute bottom-0 left-[580px] z-20 absolute1'
 						style={divStyle2}
 					></div>
 					<div
-						className='absolute bottom-0 left-[-540px]  absolute1'
+						className='absolute bottom-0 left-[480px]  absolute1'
 						style={divStyle3}
 					></div>
 
-					<div className='col-span-6 bg-black text-white' style={Image3}></div>
+					<div className='col-span-6  text-white' style={Image3}></div>
 				</div>
 			</Carousel>
 		</div>

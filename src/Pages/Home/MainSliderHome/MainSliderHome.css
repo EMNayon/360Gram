@@ -1,3 +1,22 @@
+/* slider css start */
+
+.slider-container {
+	height: 58.5vh;
+	/* background-color: white !important; */
+	color: white;
+	background: linear-gradient(
+			rgba(22, 22, 23, 0.9) 100%,
+			rgba(22, 22, 23, 0.9) 100%
+		),
+		url(../../../assets/images/shapes/slider-3-bg-1.png);
+	z-index: 2;
+	opacity: 0.8;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* slider css end  */
+
 @keyframes slide {
 	0%,
 	100% {
@@ -59,3 +78,8 @@
 		right: 0;
 	}
 }
+
+/* 
+	rgba(76, 76, 77, .9) 100%,
+			rgba(76, 76, 77, .9) 100%
+		), */

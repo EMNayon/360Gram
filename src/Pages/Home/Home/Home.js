@@ -11,6 +11,7 @@ import AgencyBenifits from '../AgencyBenifits/AgencyBenifits';
 import BlogOneHome from '../BlogOneHome/BlogOneHome';
 import ContactOneHome from '../ContactOneHome/ContactOneHome';
 import { useEffect } from 'react';
+import Header from '../../../Shared/Header/Header';
 // import SliderHome from '../SliderHome/SliderHome';
 
 // import Header from '../../../Shared/Header/Header';
@@ -21,22 +22,22 @@ const Home = () => {
     },[])
     
     return (
-        <div >
-            {/* <Header/> */}
-           <MainSliderHome/>
-           {/* <SliderHome/> */}
-           <OurServices/>
-           <Agency/>
-           <ServicesOne/>
-           <Feature/>
-           <NisozSolution/>
-           <BuisnessFeature/>
-           <PortfolioOne/>
-           <AgencyBenifits/>
-           <BlogOneHome isShow={true}/>
-           <ContactOneHome/> 
-        </div>
-    );
+			<div>
+				{/* <Header/> */}
+				<MainSliderHome />
+				{/* <SliderHome/> */}
+				<OurServices />
+				<Agency />
+				<ServicesOne />
+				<Feature />
+				<NisozSolution />
+				<BuisnessFeature />
+				<PortfolioOne />
+				<AgencyBenifits />
+				<BlogOneHome isShow={true} />
+				<ContactOneHome />
+			</div>
+		);
 };
 
 export default Home;

@@ -45,9 +45,9 @@ const Header = () => {
 	};
 
 	return (
-		<header className='bg-black text-white  shadow py-4  sticky top-0 z-50 '>
+		<header className='bg-black text-white  shadow py-4  sticky top-0 z-50'>
 			<div className='flex items-center justify-between'>
-				<img src={logo} alt='Company Logo' className='h-14 w-28' />
+				<img src={logo} alt='Company Logo' className='h-14 w-28 ms-24' />
 
 				<div className='hidden md:block lg:block'>
 					<div
